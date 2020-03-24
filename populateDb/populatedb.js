@@ -62,7 +62,7 @@ function chapterCreate(position, contents, language, cb) {
     }
     console.log('New Chapter: ');
     chapters.push(chapter);
-    // this is getting called too many times
+    // cb(null, chapter);
   }  );
 }
 
