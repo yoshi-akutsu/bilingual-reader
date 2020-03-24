@@ -2,12 +2,12 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var PageSchema = new Schema(
+var ChapterSchema = new Schema(
     {
         position: {type: Number, required: true},
         contents: [],
-        book: {type: Schema.Types.ObjectId, ref: 'Book', required: true},
+        language: {type: String, required: true}
     }
 )
 
-module.exports = mongoose.model('Page', PageSchema)
+module.exports = mongoose.model('Chapter', ChapterSchema)

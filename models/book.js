@@ -5,8 +5,8 @@ var Schema = mongoose.Schema;
 var BookSchema = new Schema(
     {
         title: {type: String, required: true, max: 100},
-        pages: [{type: Schema.Types.ObjectId, ref: 'Page'}],
-        language: {type: String, required: true, max: 10}
+        author: {type: String, required: true, max: 100},
+        chapters: [{type: Schema.Types.ObjectId, ref: 'Chapter'}],
     }
 )
 
