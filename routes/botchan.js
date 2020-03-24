@@ -1,13 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-// Home page route
-router.get('/', function (req, res) {
-    res.send('Botchan home page.');
-})
+var botchan_controller = require('../controllers/botchanController')
 
-router.get('/:page', function(req, res) {
-    res.send(req.params.page);
-})
+
+// Home page route
+router.get('/', botchan_controller.index);
+
+router.get('/:page', botchan_controller.page);
 
 module.exports = router;

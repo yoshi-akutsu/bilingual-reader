@@ -11,8 +11,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 var chapterIdArray = []
 
-japaneseBookId = '5e7a3f72fa1a1f26ad184c94';
-englishBookId = '5e7a3f72fa1a1f26ad184c93';
+const japaneseBookId = '5e7a3f72fa1a1f26ad184c94';
+const englishBookId = '5e7a3f72fa1a1f26ad184c93';
 
 chapter.find({'language': 'Japanese'})
     .select('_id')

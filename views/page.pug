@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    a(href='./' + prev) Prev
+    a(href='./' + next) Next
+    div(class='container')
+        if prev === 10
+            div(class='text')
+                each paragraph in eng
+                    div(class='section')
+                        p=paragraph.join('')
+            div(class='text')
+                each paragraph in jp
+                    div(class='section')
+                        p=paragraph.join(' ')
+        else                
+            div(class='text')
+                each paragraph in eng
+                    div(class='section')
+                        p=paragraph.join(' ')
+            div(class='text')
+                each paragraph in jp
+                    div(class='section')
+                        p=paragraph.join('')
+    a(href='./' + prev) Prev
+    a(href='./' + next) Next
